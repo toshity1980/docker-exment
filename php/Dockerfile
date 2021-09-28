@@ -2,7 +2,7 @@ FROM php:7.3-fpm
 
 # install php-ext
 RUN apt-get update && apt-get install -y \
-  git vim unzip libxml2-dev libpng-dev default-mysql-client \
+  git vim unzip libzip-dev libxml2-dev libpng-dev default-mysql-client \
   && docker-php-ext-install mbstring mysqli dom gd zip pdo_mysql \
   && apt-get clean
 
